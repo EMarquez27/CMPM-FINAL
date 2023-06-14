@@ -226,11 +226,12 @@ class Title extends Phaser.Scene{
     }
 
     preload() {
-        
+        this.load.path = './assets/'; 
     }
 
     create() {
-
+        .setInteractive()
+        .on('pointerdown', () => this.scene.start('menu'));
     }
 }
 
@@ -240,11 +241,12 @@ class Settings extends Phaser.Scene {
     }
 
     preload() {
-        
+        this.load.path = './assets/';
     }
 
     create() {
-
+        .setInteractive()
+        .on('pointerdown', () => this.scene.start('menu'));
     }
 }
 
@@ -254,39 +256,42 @@ class Intro extends Phaser.Scene {
     }
 
     preload() {
-        
+        this.load.path = './assets/';
     }
 
     create() {
-
+        .setInteractive()
+        .on('pointerdown', () => this.scene.start('menu'));
     }
 }
 
-class Rae1 extends Phaser.Scene {
+class Freya1 extends Phaser.Scene {
     constructor() {
-        super('rae1')
+        super('Freya1')
     }
 
     preload() {
-        
+        this.load.path = './assets/';
     }
 
     create() {
-
+        .setInteractive()
+        .on('pointerdown', () => this.scene.start('menu'));
     }
 }
 
-class Rae2 extends Phaser.Scene {
+class Freya2 extends Phaser.Scene {
     constructor() {
-        super('rae2')
+        super('Freya2')
     }
 
     preload() {
-        
+        this.load.path = './assets/';
     }
 
     create() {
-
+        .setInteractive()
+        .on('pointerdown', () => this.scene.start('menu'));
     }
 }
 
@@ -296,11 +301,12 @@ class Violet1 extends Phaser.Scene {
     }
 
     preload() {
-        
+        this.load.path = './assets/';
     }
 
     create() {
-
+        .setInteractive()
+        .on('pointerdown', () => this.scene.start('menu'));
     }
 }
 
@@ -310,11 +316,12 @@ class Violet2 extends Phaser.Scene {
     }
 
     preload() {
-        
+        this.load.path = './assets/';
     }
 
     create() {
-
+        .setInteractive()
+        .on('pointerdown', () => this.scene.start('menu'));
     }
 }
 
@@ -324,11 +331,12 @@ class Violet3 extends Phaser.Scene {
     }
 
     preload() {
-        
+        this.load.path = './assets/';
     }
 
     create() {
-
+        .setInteractive()
+        .on('pointerdown', () => this.scene.start('menu'));
     }
 }
 
@@ -338,11 +346,12 @@ class Violet4 extends Phaser.Scene {
     }
 
     preload() {
-        
+        this.load.path = './assets/';
     }
 
     create() {
-
+        .setInteractive()
+        .on('pointerdown', () => this.scene.start('menu'));
     }
 }
 
@@ -352,11 +361,12 @@ class Nero1 extends Phaser.Scene {
     }
 
     preload() {
-        
+        this.load.path = './assets/';
     }
 
     create() {
-
+        .setInteractive()
+        .on('pointerdown', () => this.scene.start('menu'));
     }
 }
 
@@ -366,11 +376,12 @@ class Nero2 extends Phaser.Scene {
     }
 
     preload() {
-        
+        this.load.path = './assets/';
     }
 
     create() {
-
+        .setInteractive()
+        .on('pointerdown', () => this.scene.start('menu'));
     }
 }
 
@@ -380,11 +391,12 @@ class Nero3 extends Phaser.Scene {
     }
 
     preload() {
-        
+        this.load.path = './assets/';
     }
 
     create() {
-
+        .setInteractive()
+        .on('pointerdown', () => this.scene.start('menu'));
     }
 }
 
@@ -394,11 +406,12 @@ class Nero4 extends Phaser.Scene {
     }
 
     preload() {
-        
+        this.load.path = './assets/';
     }
 
     create() {
-
+        .setInteractive()
+        .on('pointerdown', () => this.scene.start('menu'));
     }
 }
 
@@ -408,11 +421,12 @@ class Intro extends Phaser.Scene {
     }
 
     preload() {
-        
+        this.load.path = './assets/';
     }
 
     create() {
-
+        .setInteractive()
+        .on('pointerdown', () => this.scene.start('menu'));
     }
 }
 
@@ -422,11 +436,12 @@ class Outro extends Phaser.Scene {
     }
 
     preload() {
-        
+        this.load.path = './assets/';
     }
 
     create() {
-
+        .setInteractive()
+        .on('pointerdown', () => this.scene.start('menu'));
     }
 }
 
