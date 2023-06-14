@@ -9,7 +9,7 @@ class Studio extends Phaser.Scene
         this.load.path = './assets/';
         this.load.image('studio', 'studio.png');
         this.load.audio('bgm', 'bgm.mp3');
-        this.load.spritesheet("gif", "gif4.png", {frameWidth: 1200, frameHeight: 1080});
+       // this.load.spritesheet("gif", "gif4.png", {frameWidth: 1200, frameHeight: 1080});
         //this.load.audio('Boom', 'boom.mp3');
     }
 
@@ -476,5 +476,6 @@ const game = new Phaser.Game({
     },
 
     type: Phaser.AUTO,
-    scene: [Studio, MainMenu, Options, Title, Settings, Intro, Outro]
-})
+    //scene: [Studio, MainMenu, Options, Title, Settings, Intro, Outro]
+    scene: [Studio],
+});
