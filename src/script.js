@@ -272,6 +272,7 @@ class Freya1 extends Phaser.Scene {
 
     preload() {
         this.load.path = './assets/';
+        this.load.image('freya', 'Freya.png');
     }
 
     create() {
@@ -287,6 +288,7 @@ class Freya2 extends Phaser.Scene {
 
     preload() {
         this.load.path = './assets/';
+        this.load.image('freya', 'Freya.png');
     }
 
     create() {
@@ -302,6 +304,7 @@ class Violet1 extends Phaser.Scene {
 
     preload() {
         this.load.path = './assets/';
+        this.load.image('freya', 'Freya.png');
     }
 
     create() {
@@ -317,6 +320,7 @@ class Violet2 extends Phaser.Scene {
 
     preload() {
         this.load.path = './assets/';
+        this.load.image('freya', 'Freya.png');
     }
 
     create() {
@@ -332,6 +336,7 @@ class Violet3 extends Phaser.Scene {
 
     preload() {
         this.load.path = './assets/';
+        this.load.image('freya', 'Freya.png');
     }
 
     create() {
@@ -347,6 +352,7 @@ class Violet4 extends Phaser.Scene {
 
     preload() {
         this.load.path = './assets/';
+        this.load.image('freya', 'Freya.png');
     }
 
     create() {
@@ -362,6 +368,7 @@ class Nero1 extends Phaser.Scene {
 
     preload() {
         this.load.path = './assets/';
+        this.load.image('freya', 'Freya.png');
     }
 
     create() {
@@ -377,6 +384,7 @@ class Nero2 extends Phaser.Scene {
 
     preload() {
         this.load.path = './assets/';
+        this.load.image('freya', 'Freya.png');
     }
 
     create() {
@@ -392,6 +400,7 @@ class Nero3 extends Phaser.Scene {
 
     preload() {
         this.load.path = './assets/';
+        this.load.image('freya', 'Freya.png');
     }
 
     create() {
@@ -407,6 +416,7 @@ class Nero4 extends Phaser.Scene {
 
     preload() {
         this.load.path = './assets/';
+        this.load.image('freya', 'Freya.png');
     }
 
     create() {
@@ -422,6 +432,7 @@ class Intro extends Phaser.Scene {
 
     preload() {
         this.load.path = './assets/';
+        this.load.image('freya', 'Freya.png');
     }
 
     create() {
@@ -437,6 +448,7 @@ class Outro extends Phaser.Scene {
 
     preload() {
         this.load.path = './assets/';
+        this.load.image('freya', 'Freya.png');
     }
 
     create() {
