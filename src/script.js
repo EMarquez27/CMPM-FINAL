@@ -305,9 +305,11 @@ class Violet1 extends Phaser.Scene {
     preload() {
         this.load.path = './assets/';
         this.load.image('freya', 'Freya.png');
+        this.load.image('violet', 'Violet.png');
     }
 
     create() {
+        this.load.text("")
         .setInteractive()
         .on('pointerdown', () => this.scene.start('menu'));
     }
@@ -321,6 +323,7 @@ class Violet2 extends Phaser.Scene {
     preload() {
         this.load.path = './assets/';
         this.load.image('freya', 'Freya.png');
+        this.load.image('violet', 'Violet.png');
     }
 
     create() {
@@ -337,11 +340,13 @@ class Violet3 extends Phaser.Scene {
     preload() {
         this.load.path = './assets/';
         this.load.image('freya', 'Freya.png');
+        this.load.image('violet', 'Violet.png');
     }
 
     create() {
         .setInteractive()
         .on('pointerdown', () => this.scene.start('menu'));
+        
     }
 }
 
@@ -353,6 +358,7 @@ class Violet4 extends Phaser.Scene {
     preload() {
         this.load.path = './assets/';
         this.load.image('freya', 'Freya.png');
+        this.load.image('violet', 'Violet.png');
     }
 
     create() {
@@ -361,14 +367,15 @@ class Violet4 extends Phaser.Scene {
     }
 }
 
-class Nero1 extends Phaser.Scene {
+class Bianca1 extends Phaser.Scene {
     constructor() {
-        super('nero1')
+        super('Bianca1')
     }
 
     preload() {
         this.load.path = './assets/';
         this.load.image('freya', 'Freya.png');
+        this.load.image('bianca', 'Bianca.png');
     }
 
     create() {
@@ -377,14 +384,15 @@ class Nero1 extends Phaser.Scene {
     }
 }
 
-class Nero2 extends Phaser.Scene {
+class Bianca2 extends Phaser.Scene {
     constructor() {
-        super('nero2')
+        super('Bianca2')
     }
 
     preload() {
         this.load.path = './assets/';
         this.load.image('freya', 'Freya.png');
+        this.load.image('bianca', 'Bianca.png');
     }
 
     create() {
@@ -393,14 +401,15 @@ class Nero2 extends Phaser.Scene {
     }
 }
 
-class Nero3 extends Phaser.Scene {
+class Bianca3 extends Phaser.Scene {
     constructor() {
-        super('nero3')
+        super('Bianca3')
     }
 
     preload() {
         this.load.path = './assets/';
         this.load.image('freya', 'Freya.png');
+        this.load.image('bianca', 'Bianca.png');
     }
 
     create() {
@@ -409,14 +418,15 @@ class Nero3 extends Phaser.Scene {
     }
 }
 
-class Nero4 extends Phaser.Scene {
+class Bianca4 extends Phaser.Scene {
     constructor() {
-        super('nero4')
+        super('Bianca4')
     }
 
     preload() {
         this.load.path = './assets/';
         this.load.image('freya', 'Freya.png');
+        this.load.image('bianca', 'Bianca.png');
     }
 
     create() {
