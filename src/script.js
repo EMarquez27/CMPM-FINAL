@@ -271,6 +271,7 @@ class Freya1 extends AdventureScene {
 
     onEnter() {
         this.load.image('freya');
+        this.load.image('violet');
         //.setInteractive()
         //.on('pointerdown', () => this.scene.start('menu'));
     }
@@ -288,6 +289,7 @@ class Freya2 extends AdventureScene {
 
     onEnter() {
         this.load.image('freya');
+        this.load.image('violet');
         //.setInteractive()
         //.on('pointerdown', () => this.scene.start('menu'));
     }
@@ -306,6 +308,7 @@ class Violet1 extends AdventureScene {
 
     onEnter() {
         this.load.image('freya');
+        this.load.image('violet');
     }
 }
 
@@ -322,6 +325,7 @@ class Violet2 extends AdventureScene {
 
     onEnter() {
         this.load.image('freya');
+        this.load.image('violet');
     }
 }
 
@@ -338,6 +342,7 @@ class Violet3 extends AdventureScene {
 
     onEnter() {
         this.load.image('freya');
+        this.load.image('violet');
         
     }
 }
@@ -355,6 +360,7 @@ class Violet4 extends AdventureScene {
 
     onEnter() {
         this.load.image('freya');
+        this.load.image('violet');
     }
 }
 
@@ -422,18 +428,37 @@ class Bianca4 extends AdventureScene {
     }
 }
 
-class Outro extends AdventureScene {
+class VioletEnding extends AdventureScene {
     constructor() {
-        super('outro')
+        super('violetending')
     }
 
     preload() {
         this.load.path = './assets/';
         this.load.image('freya', 'Freya.png');
+        this.load.image('violet', 'Violet.png');
     }
 
     onEnter() {
         this.load.image('freya');
+        this.load.image('violet');
+    }
+}
+
+class BiancaEnding extends AdventureScene {
+    constructor() {
+        super('biancaending')
+    }
+
+    preload() {
+        this.load.path = './assets/';
+        this.load.image('freya', 'Freya.png');
+        this.load.image('bianca', 'Bianca.png');
+    }
+
+    onEnter() {
+        this.load.image('freya');
+        this.load.image('bianca');
     }
 }
 
