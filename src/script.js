@@ -1,23 +1,21 @@
-class Studio extends Phaser.Scene
-{
-    constructor ()
-    {
+class Studio extends Phaser.Scene {
+    constructor() {
         super({ key: 'studio' });
     }
 
-    preload (){
+    preload() {
         this.load.path = './assets/';
         this.load.image('studio', 'studio.png');
         this.load.audio('bgm', 'bgm.mp3');
         //this.load.spritesheet("gif", "./assets/gif4.png", {frameWidth: 1200, frameHeight: 1080});
-        this.load.spritesheet("gif", "./assets/TatStudio.gif", {frameWidth: 1200, frameHeight: 1080});
+        this.load.spritesheet("gif", "./assets/TatStudio.gif", { frameWidth: 1200, frameHeight: 1080 });
         //this.load.audio('Boom', 'boom.mp3');
     }
 
-    create ()
-    {  
-        this.cameras.main.fadeIn(1000, 0,0,0);
-        let sound = this.sound.add('bgm', {loop: true});
+    create() {
+        this.cameras.main.fadeIn(1000, 0, 0, 0);
+        let sound = this.sound.add('bgm', { loop: true });
+        sound.setVolume(0.25);
         sound.play();
 
         this.load.spritesheet({
@@ -34,7 +32,7 @@ class Studio extends Phaser.Scene
         //this.time.delayedCall(1000, () => {
         //    sound2.play();
         //});
-       
+
         let studio = this.add.image(
             960,//x
             500,
@@ -53,7 +51,7 @@ class Studio extends Phaser.Scene
         //this.anim.play("vid");
 
         this.time.delayedCall(2000, () => {
-            this.cameras.main.fadeOut(2000, 0,0,0);
+            this.cameras.main.fadeOut(2000, 0, 0, 0);
         });
 
         this.time.delayedCall(5000, () => {
@@ -68,21 +66,19 @@ class Studio extends Phaser.Scene
                 repeat: -1,
                 duration: 1000
             });
-        
 
-        this.input.on('pointerdown', () => this.scene.start('menu'));
+
+            this.input.on('pointerdown', () => this.scene.start('menu'));
+        }
     }
 }
-}
 
-class MainMenu extends Phaser.Scene
-{
-    constructor ()
-    {
+class MainMenu extends Phaser.Scene {
+    constructor() {
         super({ key: 'menu' });
     }
 
-    preload (){
+    preload() {
         this.load.path = './assets/';
         this.load.image('start', 'Start2png.png');
         this.load.image('options', 'Options2.png');
@@ -92,10 +88,9 @@ class MainMenu extends Phaser.Scene
 
     }
 
-    create ()
-    {
-        this.cameras.main.fadeIn(1000, 0,0,0);
-       
+    create() {
+        this.cameras.main.fadeIn(1000, 0, 0, 0);
+
         let title = this.add.image(
             960,//x
             500,
@@ -159,22 +154,20 @@ class MainMenu extends Phaser.Scene
             repeat: -1,
             duration: 1000
         });
-}
+    }
 }
 
-class Options extends Phaser.Scene
-{
-    constructor ()
-    {
+class Options extends Phaser.Scene {
+    constructor() {
         super({ key: 'options' });
     }
 
-    intialize (){
+    intialize() {
         //This variable will hold the sound value.
-        this.registry.set('options', {Sound: 100})
+        this.registry.set('options', { Sound: 100 })
     }
 
-    preload (){
+    preload() {
         this.load.path = './assets/';
         this.load.image('back', 'back.png');
         this.load.image('options', 'Options.png');
@@ -182,18 +175,17 @@ class Options extends Phaser.Scene
 
     }
 
-    create ()
-    {
+    create() {
         let options = this.add.text(
             810,//x
             500,
             "Turn OFF Sound",
         )
-        .setScale(2)
-        
+            .setScale(2)
+
         options.setInteractive()
         options.on('pointerdown', () => sound.pause());
-        
+
         let back = this.imageObject = this.add.image(
             200,
             200,
@@ -205,14 +197,12 @@ class Options extends Phaser.Scene
     }
 }
 
-class Credits extends Phaser.Scene
-{
-    constructor ()
-    {
+class Credits extends Phaser.Scene {
+    constructor() {
         super({ key: 'credits' });
     }
 
-    preload (){
+    preload() {
         this.load.path = './assets/';
         this.load.image('back', 'back.png');
         this.load.image('options', 'Options.png');
@@ -220,8 +210,7 @@ class Credits extends Phaser.Scene
 
     }
 
-    create ()
-    {
+    create() {
         let options = this.imageObject = this.add.image(
             960,//x
             600,
@@ -246,20 +235,38 @@ class Intro extends Phaser.Scene {
     }
 
     preload() {
-        this.load.path = './assets/'; 
+        this.load.path = './assets/';
     }
 
     create() {
-        this.add.text(game.config.width/2, game.config.height/2, "Freya Amara was a distinguished veteran of war, \ncelebrated for her valor and combat abilities, \nshe was chosen to be the first test subject for an advanced cybernetic project.\n\n\n The EIGEN project")
+        this.add.text(game.config.width / 2, game.config.height / 2, "Freya Amara was a distinguished veteran of war, \ncelebrated for her valor and combat abilities, \nshe was chosen to be the first test subject for an advanced cybernetic project.\n\n\n The EIGEN project")
             .setFontSize(35)
             .setOrigin(0.5)
-        .setInteractive()
-        .on('pointerdown', () => this.scene.start('Freya1'));
+            .setInteractive()
+            .on('pointerdown', () => this.scene.start('intro2'));
+    }
+}
+
+class Intro2 extends Phaser.Scene {
+    constructor() {
+        super('intro2')
+    }
+
+    preload() {
+        this.load.path = './assets/';
+    }
+
+    create() {
+        this.add.text(game.config.width / 2, game.config.height / 2, "Freya wakes up in a scrapyard. \n Surrounded by cyborg parts and other pieces of metal, she wonders how she ended up there.")
+            .setFontSize(35)
+            .setOrigin(0.5)
+            .setInteractive()
+            .on('pointerdown', () => this.scene.start('Freya1'));
     }
 }
 
 
-class Freya1 extends AdventureScene {
+class Freya1 extends Phaser.Scene {
     constructor() {
         super('Freya1')
     }
@@ -267,17 +274,20 @@ class Freya1 extends AdventureScene {
     preload() {
         this.load.path = './assets/';
         this.load.image('freya', 'Freya.png');
+        this.load.image('violet', 'Violet.png');
     }
 
-    onEnter() {
-        this.load.image('freya');
-        this.load.image('violet');
+    create() {
+        let freya = this.add.image(300, 600, "freya");
+        freya.setScale(0.3)
+
+        this.add.text(810,500, " aslgjgl", {fontSize: 60});
         //.setInteractive()
         //.on('pointerdown', () => this.scene.start('menu'));
     }
 }
 
-class Freya2 extends AdventureScene {
+class Freya2 extends Phaser.Scene {
     constructor() {
         super('Freya2')
     }
@@ -285,17 +295,24 @@ class Freya2 extends AdventureScene {
     preload() {
         this.load.path = './assets/';
         this.load.image('freya', 'Freya.png');
+
     }
 
-    onEnter() {
+    create() {
         this.load.image('freya');
         this.load.image('violet');
+
+        let freya = this.add.image(300, 600, "freya");
+        freya.setScale(0.3)
+
+
+
         //.setInteractive()
         //.on('pointerdown', () => this.scene.start('menu'));
     }
 }
 
-class Violet1 extends AdventureScene {
+class Violet1 extends Phaser.Scene {
     constructor() {
         super('violet1')
     }
@@ -306,13 +323,18 @@ class Violet1 extends AdventureScene {
         this.load.image('violet', 'Violet.png');
     }
 
-    onEnter() {
-        this.load.image('freya');
-        this.load.image('violet');
+    create() {
+        let freya = this.add.image(300, 600, "freya");
+        freya.setScale(0.3)
+
+        let violet = this.add.image(1600, 600, "violet");
+        violet.setScale(0.3)
+
+        this.add.text(810,500, " aslgjgl");
     }
 }
 
-class Violet2 extends AdventureScene {
+class Violet2 extends Phaser.Scene {
     constructor() {
         super('violet2')
     }
@@ -323,13 +345,18 @@ class Violet2 extends AdventureScene {
         this.load.image('violet', 'Violet.png');
     }
 
-    onEnter() {
-        this.load.image('freya');
-        this.load.image('violet');
+    create() {
+        let freya = this.add.image(300, 600, "freya");
+        freya.setScale(0.3)
+
+        let violet = this.add.image(1600, 600, "violet");
+        violet.setScale(0.3)
+
+        this.add.text(810,500, " aslgjgl");
     }
 }
 
-class Violet3 extends AdventureScene {
+class Violet3 extends Phaser.Scene {
     constructor() {
         super('violet3')
     }
@@ -340,14 +367,18 @@ class Violet3 extends AdventureScene {
         this.load.image('violet', 'Violet.png');
     }
 
-    onEnter() {
-        this.load.image('freya');
-        this.load.image('violet');
-        
+    create() {
+        let freya = this.add.image(300, 600, "freya");
+        freya.setScale(0.3)
+
+        let violet = this.add.image(1600, 600, "violet");
+        violet.setScale(0.3)
+
+        this.add.text(810,500, " aslgjgl");
     }
 }
 
-class Violet4 extends AdventureScene {
+class Violet4 extends Phaser.Scene {
     constructor() {
         super('violet4')
     }
@@ -358,13 +389,18 @@ class Violet4 extends AdventureScene {
         this.load.image('violet', 'Violet.png');
     }
 
-    onEnter() {
-        this.load.image('freya');
-        this.load.image('violet');
+    create() {
+        let freya = this.add.image(300, 600, "freya");
+        freya.setScale(0.3)
+
+       let violet = this.add.image(1600, 600, "violet");
+        violet.setScale(0.3)
+
+        this.add.text(810,500, " aslgjgl");
     }
 }
 
-class Bianca1 extends AdventureScene {
+class Bianca1 extends Phaser.Scene {
     constructor() {
         super('Bianca1')
     }
@@ -375,12 +411,18 @@ class Bianca1 extends AdventureScene {
         this.load.image('bianca', 'Bianca.png');
     }
 
-    onEnter() {
-        this.load.image('freya');
+    create() {
+        let freya = this.add.image(300, 600, "freya");
+        freya.setScale(0.3)
+
+        let bianca = this.add.image(1650, 600, "bianca");
+        bianca.setScale(0.3)
+
+        this.add.text(810,500, " aslgjgl");
     }
 }
 
-class Bianca2 extends AdventureScene {
+class Bianca2 extends Phaser.Scene {
     constructor() {
         super('Bianca2')
     }
@@ -391,12 +433,18 @@ class Bianca2 extends AdventureScene {
         this.load.image('bianca', 'Bianca.png');
     }
 
-    onEnter() {
-        this.load.image('freya');
+    create() {
+        let freya = this.add.image(300, 600, "freya");
+        freya.setScale(0.3)
+
+        let bianca = this.add.image(1650, 600, "bianca");
+        bianca.setScale(0.3)
+
+        this.add.text(810,500, " aslgjgl");
     }
 }
 
-class Bianca3 extends AdventureScene {
+class Bianca3 extends Phaser.Scene {
     constructor() {
         super('Bianca3')
     }
@@ -407,12 +455,19 @@ class Bianca3 extends AdventureScene {
         this.load.image('bianca', 'Bianca.png');
     }
 
-    onEnter() {
-        this.load.image('freya');
+    create() {
+        let freya = this.add.image(300, 600, "freya");
+        freya.setScale(0.3)
+
+        let bianca = this.add.image(1650, 600, "bianca");
+        bianca.setScale(0.3)
+
+        this.add.text(810,500, " aslgjgl");
+
     }
 }
 
-class Bianca4 extends AdventureScene {
+class Bianca4 extends Phaser.Scene {
     constructor() {
         super('Bianca4')
     }
@@ -423,12 +478,18 @@ class Bianca4 extends AdventureScene {
         this.load.image('bianca', 'Bianca.png');
     }
 
-    onEnter() {
-        this.load.image('freya');
+    create() {
+        let freya = this.add.image(300, 600, "freya");
+        freya.setScale(0.3)
+
+        let bianca = this.add.image(1650, 600, "bianca");
+        bianca.setScale(0.3)
+
+        this.add.text(810,500, " aslgjgl");
     }
 }
 
-class VioletEnding extends AdventureScene {
+class VioletEnding extends Phaser.Scene {
     constructor() {
         super('violetending')
     }
@@ -439,13 +500,18 @@ class VioletEnding extends AdventureScene {
         this.load.image('violet', 'Violet.png');
     }
 
-    onEnter() {
-        this.load.image('freya');
-        this.load.image('violet');
+    create() {
+        let freya = this.add.image(300, 600, "freya");
+        freya.setScale(0.3)
+
+        let violet = this.add.image(1600, 600, "violet");
+        violet.setScale(0.3) 
+
+        this.add.text(810,500, " aslgjgl");
     }
 }
 
-class BiancaEnding extends AdventureScene {
+class BiancaEnding extends Phaser.Scene {
     constructor() {
         super('biancaending')
     }
@@ -456,18 +522,23 @@ class BiancaEnding extends AdventureScene {
         this.load.image('bianca', 'Bianca.png');
     }
 
-    onEnter() {
-        this.load.image('freya');
-        this.load.image('bianca');
+    create() {
+        let freya = this.add.image(300, 600, "freya");
+        freya.setScale(0.3)
+
+        let bianca = this.add.image(1650, 600, "bianca");
+        bianca.setScale(0.3)
+
+        this.add.text(810,500, " aslgjgl");
     }
 }
 
 const game = new Phaser.Game({
     scale: {
-    mode: Phaser.Scale.FIT,
-    autoCenter: Phaser.Scale.CENTER_BOTH,
-    width: 1900,
-    height: 1000
+        mode: Phaser.Scale.FIT,
+        autoCenter: Phaser.Scale.CENTER_BOTH,
+        width: 1900,
+        height: 1000
     },
 
     type: Phaser.AUTO,
