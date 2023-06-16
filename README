@@ -14,6 +14,7 @@ Scene flow prototype: Https://BurntThanatoast.github.io
 
 
 [theme] The documentation describes how the theme of "nearby in space, but distant in time" was addressed in the main game's design. (One sentence would be sufficient, but try to keep the description to a single paragraph even if you want to give more detail.)
+
 The theme is addressed through the setting of the story. Our main character has woken up in a scrapyard after years of being asleep. Our dating sim revolves around her finding her way through a land further into the future. 
 
 [selectable requirements] The documentation describes which of the three selectable requirements your team is attempting to satisfy (see below).
@@ -22,7 +23,7 @@ The theme is addressed through the setting of the story. Our main character has 
 
 PRODUCTION LEAD - ELYZZA JOYCE MARQUEZ
 TESTING LEAD - JOSHUA VAILLANCOURT
-
+GAMEPLAY LEAD - JORDAN REAVIS
 
 [asset credits] If the team has built there game using assets created by anyone else (even if those assets were modified before inclusion in the game), the upstream source of those assets should be credited in the documentation as well.
 
@@ -30,10 +31,6 @@ Studio art - Elyzza Joyce Marquez in PROCREATE
 Title Screen art - Elyzza Joyce Marquez in PROCREATE
 Character art and Backgrounds - generated with Lexica.art, fixed and cut with photoshop by Joshua Vaillancourt
 All audio sourced from freesound.org
-
-Playable prototypes:
-Scene flow and cinematics: https://BurntThanatoast.github.io
-Core gameplay: https://jmreavis.github.io/CMPM-GameplayPrototype/
 
 
 CREDITS
