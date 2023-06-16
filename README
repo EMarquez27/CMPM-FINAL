@@ -1,11 +1,33 @@
 EIGEN GRAU
 Final project for CMPM 120 
+Eigen: Grau is a dating simulator that follows our main character through the world of Eigen. She wakes up in a scrapyard and finds herself smitten with a fierce lady named Bianca. 
+
+[main game] The documentation links to a deployed version of the main game compatible with mobile browsers. (This might be on GitHub pages, Itch.io, or other web hosting site.)
+https://emarquez27.github.io/CMPM-FINAL/
+
+[prototypes] The documentation links to the deployed version of three playable prototypes (core gameplay, scene flow, and cinematics). (They don't need to be deployed on the same platform as the main game, but the audience needs to be able to play them by simply clicking a direct link to them.)
+
+Core gameplay prototype: https://jmreavis.github.io/CMPM-GameplayPrototype/
+Cinematics prototype: 
+
+
+[theme] The documentation describes how the theme of "nearby in space, but distant in time" was addressed in the main game's design. (One sentence would be sufficient, but try to keep the description to a single paragraph even if you want to give more detail.)
+The theme is addressed through the setting of the story. Our main character 
+
+[selectable requirements] The documentation describes which of the three selectable requirements your team is attempting to satisfy (see below).
+
+[contributor credits] The documentation identifies all of the direct contributors to the code and their assigned roles (e.g. "testing lead")
+
+
+[asset credits] If the team has built there game using assets created by anyone else (even if those assets were modified before inclusion in the game), the upstream source of those assets should be credited in the documentation as well.
+
+Studio art - Elyzza Joyce Marquez in PROCREATE
+Title Screen art - Elyzza Joyce Marquez in PROCREATE
+Character art and Backgrounds - generated with Lexica.art, fixed and cut with photoshop by Joshua Vaillancourt
+All audio sourced from freesound.org
+
 
 CREDITS
 Joshua Vaillancourt
 Elyzza Joyce Marquez
 Jordan Reavis 
-
-ALL AUDIO SOURCED FROM FREESOUND.ORG 
-Character and background art generated from lexica.art 
-Title and Studio ART made by Elyzza Joyce Marquez
