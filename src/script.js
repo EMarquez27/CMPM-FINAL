@@ -278,7 +278,7 @@ class Intro2 extends Phaser.Scene {
             .setFontSize(35)
             .setOrigin(0.5)
             .setInteractive()
-            .on('pointerdown', () => this.scene.start('Freya1'));
+            .on('pointerdown', () => this.scene.start('one'));
     }
 }
 
@@ -335,7 +335,7 @@ class One extends Phaser.Scene {
                                                 .on('pointerdown', () => this.scene.start('End1'));
                                             let text7 = this.add.text(550,500, "Leave and go to town to try and mooch off some baddies.", {fontSize: 30})
                                                 .setInteractive()
-                                                .on('pointerdown', () => this.scene.start('Two'));
+                                                .on('pointerdown', () => this.scene.start('two'));
                                         });
                                 });
                         });
@@ -443,7 +443,7 @@ class End2 extends Phaser.Scene {
         //let freya = this.add.image(300, 600, "freya");
         //freya.setScale(0.3)
 
-        let text1 = this.add.text(50,300, "The milisecond after you finished your pick up line the baddie you approached starts convulsing and has a seizure on the floor.\nYou become panicked not knowing what to do.\nYou watch as the lights in her eyes go out and she lies there motionless and dead.\nYou hear sirens approach and police come over to arrest you.\nYou ask what for and they say its for being cringe.\nAlso first degree murder.\nDays later in court you are found guilty and given the death sentence.\nSitting in the electric chair you say biggest regret is ever playing League of Legends for if you did not none of this would have happened.\nAnd then you die.", {fontSize: 25})
+        let text1 = this.add.text(50,300, "The milisecond after you finished your pick up line the baddie you\napproached starts convulsing and has a seizure on the floor.\nYou become panicked not knowing what to do.\nYou watch as the lights in her eyes go out and\nshe lies there motionless and dead.\nYou hear sirens approach and police come over to arrest you.\nYou ask what for and they say its for being cringe.\nAlso first degree murder.\nDays later in court you are found guilty and given the death sentence.\nSitting in the electric chair you say biggest regret is ever playing\nLeague of Legends for if you did not none of this would have happened.\nAnd then you die.", {fontSize: 25})
 
 
 
@@ -483,7 +483,7 @@ class Three extends Phaser.Scene {
                     .setInteractive()
                     .on('pointerdown', () => {
                         text2.setVisible(false);
-                        let text3 = this.add.text(550,500, "Baddie\n\nYou know how sad I am to admit\nthat this was in fact the best one I’ve heard so far.", {fontSize: 30})
+                        let text3 = this.add.text(550,500, "Baddie\n\nYou know how sad I am to admit\nthat this was in fact the best\none I’ve heard so far.", {fontSize: 30})
                         .setInteractive()
                         .on('pointerdown', () => {
                             text3.setVisible(false);
@@ -499,7 +499,7 @@ class Three extends Phaser.Scene {
                                                 .setInteractive()
                                                 .on('pointerdown', () => {
                                                     text6.setVisible(false);
-                                                    let text7 = this.add.text(550,500, "???\n\n*You look around and find an incredibly obvious sign that says Freya.", {fontSize: 30})
+                                                    let text7 = this.add.text(550,500, "???\n\n*You look around and find an incredibly\nobvious sign that says Freya.", {fontSize: 30})
                                                         .setInteractive()
                                                         .on('pointerdown', () => {
                                                             text7.setVisible(false);
@@ -684,7 +684,7 @@ class Four extends Phaser.Scene {
                                                                                                             .on('pointerdown', () => {
                                                                                                                 text14.setVisible(false);
                                                                                                                 text15.setVisible(false);
-                                                                                                                let text16 = this.add.text(550,500, "Bianca\n\nThat was quite possibly the most normal thing I’ve heard you say so far.", {fontSize: 30})
+                                                                                                                let text16 = this.add.text(550,500, "Bianca\n\nThat was quite possibly the most\nnormal thing I’ve heard you say so far.", {fontSize: 30})
                                                                                                                     .setInteractive()
                                                                                                                     .on('pointerdown', () => {
                                                                                                                         text16.setVisible(false);
@@ -692,7 +692,7 @@ class Four extends Phaser.Scene {
                                                                                                                             .setInteractive()
                                                                                                                             .on('pointerdown', () => {
                                                                                                                                 text17.setVisible(false);
-                                                                                                                                let text18 = this.add.text(550,500, "Bianca\n\nEhh sure, eating alone all the time gets boring.  You seem like you’d be entertaining enough.", {fontSize: 30})
+                                                                                                                                let text18 = this.add.text(550,500, "Bianca\n\nEhh sure, eating alone all the time gets boring.\nYou seem like you’d be entertaining enough.", {fontSize: 30})
                                                                                                                                 .setInteractive()
                                                                                                                                 .on('pointerdown', () => {
                                                                                                                                     text18.setVisible(false);
@@ -786,7 +786,7 @@ class Five extends Phaser.Scene {
                             text3.setVisible(false);
                             let text4 = this.add.text(550,300, "Two number 9’s, a number 9 large, a number 6 with extra dip, a number 7, two number 45s, one with cheese, and a large soda.", {fontSize: 30})
                                 .setInteractive()
-                                .on('pointerdown', () => this.scene.start('end5'));
+                                .on('pointerdown', () => this.scene.start('End5'));
                             let text5 = this.add.text(550,500, "A water cup.", {fontSize: 30})
                                 .setInteractive()
                                 .on('pointerdown', () => this.scene.start('six'));
@@ -955,19 +955,19 @@ class Seven extends Phaser.Scene {
         let bianca = this.add.image(1650, 600, "bianca");
         bianca.setScale(0.3)
 
-        let text1 = this.add.text(550,500, "*You move head on over to her apartment building where you wait in an elevator for what seems like forever.  You get in and it is a nice ass place.  It even has one of those bidets on the toilet.", {fontSize: 30})
+        let text1 = this.add.text(550,500, "*You move head on over to her apartment building\nwhere you wait in an elevator for what seems like forever.\nYou get in and it is a nice ass place.\nIt even has one of those bidets on the toilet.", {fontSize: 30})
             .setInteractive()
             .on('pointerdown', () => {
                 text1.setVisible(false);
-                let text2 = this.add.text(550,500, "Freya\n\nI knew I chose the right baddie to hit on. This place is sweet.", {fontSize: 30})
+                let text2 = this.add.text(550,500, "Freya\n\nI knew I chose the right baddie to hit on.\nThis place is sweet.", {fontSize: 30})
                     .setInteractive()
                     .on('pointerdown', () => {
                         text2.setVisible(false);
-                        let text3 = this.add.text(550,500, "Bianca\n\nDon’t make me regret this decision any more than I already have.", {fontSize: 30})
+                        let text3 = this.add.text(550,500, "Bianca\n\nDon’t make me regret this decision\nany more than I already have.", {fontSize: 30})
                         .setInteractive()
                         .on('pointerdown', () => {
                             text3.setVisible(false);
-                            let text4 = this.add.text(550,500, "Freya\n\nAlright fine.  So how long can I stay here?", {fontSize: 30})
+                            let text4 = this.add.text(550,500, "Freya\n\nAlright fine.\nSo how long can I stay here?", {fontSize: 30})
                                 .setInteractive()
                                 .on('pointerdown', () => {
                                     text4.setVisible(false);
@@ -983,11 +983,11 @@ class Seven extends Phaser.Scene {
                                                 .on('pointerdown', () => {
                                                     text6.setVisible(false);
                                                     text7.setVisible(false);
-                                                    let text8 = this.add.text(550,300, "Bianca\n\nOk sure why not its been a long night out and you were fun.", {fontSize: 30})
+                                                    let text8 = this.add.text(550,300, "Bianca\n\nOk sure why not its been a\nlong night out and you were fun.", {fontSize: 30})
                                                         .setInteractive()
                                                         .on('pointerdown', () => {
                                                             text8.setVisible(false);
-                                                            let text9 = this.add.text(550,300, "Freya\n\nAre you serious?  That worked?  I thought that was a joke choice that would end the game.", {fontSize: 30})
+                                                            let text9 = this.add.text(550,300, "Freya\n\nAre you serious?\nThat worked?\nI thought that was a joke choice that would end the game.", {fontSize: 30})
                                                                 .setInteractive()
                                                                 .on('pointerdown', () => {
                                                                     text9.setVisible(false);
@@ -1030,7 +1030,7 @@ class End6 extends Phaser.Scene {
         //let freya = this.add.image(300, 600, "freya");
         //freya.setScale(0.3)
 
-        let text1 = this.add.text(50,300, "And that you do.  You place yourself on her couch never to move again.  No matter how much complaining and threatening Bianca did you never did move from that couch.  Time went on and at some point it seemed as if Bianca forgot you even existed.  You began to meld into one with the couch and eventually disappeard into it all together never to be seen again.  The couch was you and you were it.  And you were happy.", {fontSize: 25})
+        let text1 = this.add.text(50,300, "And that you do.\nYou place yourself on her couch never to move again.\nNo matter how much complaining and threatening Bianca did you never did move from that couch.\nTime went on and at some point it seemed as if Bianca forgot you even existed.\nYou began to meld into one with the couch and eventually disappeard into it all together never to be seen again.\nThe couch was you and you were it.\nAnd you were happy.", {fontSize: 25})
 
 
 
@@ -1057,7 +1057,7 @@ class End7 extends Phaser.Scene {
         //let freya = this.add.image(300, 600, "freya");
         //freya.setScale(0.3)
 
-        let text1 = this.add.text(50,300, "You move closer towards Bianca putting your hand behind her head bringing her face close to yours.  You move your face in for a kiss and as your lips touch.  The author remembered this probably isn't appropriate to continue writing and also realized that he doesn't know how to write sex scenes.  So just use your imagination or something.  And then the two of them lived happily ever after or something like that.  The end.", {fontSize: 25})
+        let text1 = this.add.text(50,300, "You move closer towards Bianca putting your\nhand behind her head bringing her face close to yours.\nYou move your face in for a kiss and as your lips touch.\nThe author remembered this probably isn't appropriate to continue writing and also realized that he doesn't know how to write sex scenes.\nSo just use your imagination or something.\nAnd then the two of them lived happily ever after or something like that.\nThe end.", {fontSize: 25})
 
 
 
@@ -1079,5 +1079,5 @@ const game = new Phaser.Game({
     //scene: [Studio, MainMenu, Options, Credits, Intro, Intro2, Freya1, Freya2, Violet1, Violet2, Violet3, Violet4, Bianca1, Bianca2, Bianca3, Biana4, VioletEnding, BiancaEnding]
     //scene: [Studio, MainMenu, Options, Credits, Intro, Intro2, One, Two, End1, End2],
     //scene: [One, Two, Three, Four, End1, End2 ]
-    scene: [Studio, MainMenu, Options, Credits, Intro, Intro2,  ]
+    scene: [Studio, MainMenu, Options, Credits, Intro, Intro2, One, Two, Three, Four, Five, Six, Seven, End1, End2, End3, End4, End5, End6, End7]
 });
